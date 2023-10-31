@@ -23,10 +23,10 @@ default_config = TRLConfig(
     train=TrainConfig(
         seq_length=512, # DPO: 512 1024
         epochs=1, # 100
-        total_steps=14000, #
+        total_steps=140, # 14000 11000
         batch_size=1, # 4/1
         checkpoint_interval=1000, #
-        eval_interval=1000,
+        eval_interval=100, # 1000
         pipeline="PromptPipeline",
         trainer="AccelerateSFTTrainer",
         checkpoint_dir="checkpoints/sft_hh/pythia-70m",
@@ -51,7 +51,7 @@ def preprocess(sample):
 def main(hparams={}):
     config = TRLConfig.update(default_config, hparams)
 
-    dataset = load_dataset("Dahoas/full-hh-rlhf").map(preprocess)
+    dataset = load_dataset("Dahoas/static-hh").map(preprocess)
     reward_fn = create_reward_fn()
 
     trlx.train(
