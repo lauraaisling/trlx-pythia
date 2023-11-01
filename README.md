@@ -16,6 +16,7 @@ git clone https://github.com/CarperAI/trlx.git
 cd trlx
 pip install torch --extra-index-url https://download.pytorch.org/whl/cu118
 pip install -e .
+cd ..
 ```
 
 3. Clone repo
