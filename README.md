@@ -1,5 +1,5 @@
 # trlx-pythia
- Supervised finetuning of EleutherAI/pythia-XXX models with helpful part of Anthropic hh [dataset](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) with [TRLx](https://github.com/CarperAI/trlx/tree/main) library. 
+ Supervised finetuning of EleutherAI/pythia-XXX models with helpful part of Anthropic hh [dataset](https://huggingface.co/datasets/Dahoas/static-hh) with [TRLx](https://github.com/CarperAI/trlx/tree/main) library. 
 
 Steps: 
 1. Create and activate venv 
@@ -26,7 +26,10 @@ git clone https://github.com/lomahony/trlx-pythia.git
 Install additional requirements
 ```bash
 pip install -r requirements.txt
-
+``` 
+set up wandb tracker
+```bash
+wandb login --relogin
 ``` 
 
 3. Adjust hyperparameters and run code
