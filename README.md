@@ -5,8 +5,8 @@ Steps:
 1. Create and activate venv 
 
 ```bash
-python -m venv trlx-env
-source ~/trlx-env/bin/activate
+python3 -m venv trlx-venv
+source trlx-venv/bin/activate
 ``` 
 
 2. Install TRLx as per instructions in TRLx [README](https://github.com/CarperAI/trlx/blob/main/README.md)
