@@ -1,0 +1,1 @@
+srun --account eleuther --partition=g40x --nodes=1 --gpus=8 --cpus-per-gpu=12 nvidia-smi 

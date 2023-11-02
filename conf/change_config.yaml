@@ -1,0 +1,20 @@
+model: 
+  model_path: "EleutherAI/pythia-70m"
+
+tokenizer: 
+  tokenizer_path: "EleutherAI/pythia-70m"
+
+train: 
+  batch_size: 32
+  checkpoint_interval: 100
+  eval_interval: 100
+  checkpoint_dir: "checkpoints/sft_hh/pythia-70m"
+  project_name: "sft-pythia"
+  group_name: "pythia-70m-test"
+  run_name: "test"
+
+optimizer: 
+  name: "adamw"
+
+scheduler: 
+  name: "cosine_annealing"

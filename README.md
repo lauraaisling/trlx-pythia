@@ -12,6 +12,7 @@ source trlx-venv/bin/activate
 2. Install TRLx as per instructions in TRLx [README](https://github.com/CarperAI/trlx/blob/main/README.md)
 
 ```bash
+mkdir trlx-pythia-project
 git clone https://github.com/CarperAI/trlx.git
 cd trlx
 pip install torch --extra-index-url https://download.pytorch.org/whl/cu118
@@ -26,6 +27,7 @@ git clone https://github.com/lomahony/trlx-pythia.git
 
 Install additional requirements
 ```bash
+cd trlx-pythia
 pip install -r requirements.txt
 ``` 
 set up wandb tracker
