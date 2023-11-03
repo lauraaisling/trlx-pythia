@@ -20,7 +20,7 @@ from trlx.data.default_configs import (
 
 default_config = TRLConfig(
     train=TrainConfig(
-        seq_length=1024, # DPO: 512 1024
+        seq_length=1024, 
         epochs=1, 
         total_steps=10000000, # 
         batch_size=32, # ~96200ex/(32bs*7gpus)=~430
@@ -56,8 +56,6 @@ def main(config: DictConfig):
 
     OmegaConf.resolve(config)
 
-    # config = TRLConfig.update(default_config, hparams)
-
     # print("OmegaConf.to_yaml(config): ", OmegaConf.to_yaml(config))
     print("change_config: ", config)
 
@@ -65,7 +63,7 @@ def main(config: DictConfig):
     # with open(config_path, 'w') as f:
     #     OmegaConf.save(config, f) 
     
-    final_config = TRLConfig.update(default_config, dict(config))
+    final_config = TRLConfig.update(default_config, OmegaConf.to_container(config)) # OmegaConf.to_container(conf)
     print("Final config: ", final_config)
 
     # https://huggingface.co/datasets/Dahoas/static-hh
@@ -76,11 +74,10 @@ def main(config: DictConfig):
         config=final_config, 
         samples=dataset["train"]["chosen_sample"],
         eval_prompts=dataset["test"]["prompt"][:40], # 280
-        # metric_fn=lambda **kwargs: {"reward": reward_fn(**kwargs)}, # what??? 
+        # metric_fn=lambda **kwargs: {"reward": reward_fn(**kwargs)}, 
         stop_sequences=["Human:", "human:", "Assistant:", "assistant:"],
     )
 
 
 if __name__ == "__main__":
-    # hparams = {} if len(sys.argv) == 1 else json.loads(sys.argv[1]) 
     main()

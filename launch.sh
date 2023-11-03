@@ -18,6 +18,8 @@
 
 module load cuda/11.7
 
+export HYDRA_FULL_ERROR=1
+
 source /fsx/home-laura/trlx-venv/bin/activate
 
 accelerate launch --config_file /fsx/home-laura/trlx-pythia/trlx-pythia/conf/accelerate_config.yaml /fsx/home-laura/trlx-pythia/trlx-pythia/scripts/sft_hh.py 

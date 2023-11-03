@@ -9,12 +9,17 @@ train:
   checkpoint_interval: 100
   eval_interval: 100
   checkpoint_dir: "checkpoints/sft_hh/pythia-70m"
-  project_name: "sft-pythia"
-  group_name: "pythia-70m-test"
-  run_name: "test"
+  project_name: "sft-pythia-test"
+  group_name: "pythia-70m"
+  # run_name: "${group_name}_${optimizer}_${lr}"
+  seed: 0
 
 optimizer: 
   name: "adamw"
+  # lr: 1.0e-6
+  # betas: (0.9, 0.95)
+  # eps: 1.0e-8
+  # weight_decay: 1.0e-6
 
 scheduler: 
   name: "cosine_annealing"
