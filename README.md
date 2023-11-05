@@ -1,5 +1,4 @@
-# trlx-pythia
- Supervised finetuning of EleutherAI/pythia-XXX models with helpful part of Anthropic hh [dataset](https://huggingface.co/datasets/Dahoas/static-hh) with [TRLx](https://github.com/CarperAI/trlx/tree/main) library. 
+Supervised finetuning of EleutherAI/pythia-XXX models with helpful part of Anthropic hh [dataset](https://huggingface.co/datasets/Dahoas/static-hh) with [TRLx](https://github.com/CarperAI/trlx/tree/main) library. 
 
 Steps: 
 1. Create and activate venv 
@@ -38,8 +37,21 @@ wandb login --relogin
 3. Adjust hyperparameters and run code
 ```bash
 accelerate launch --config_file accelerate_config.yaml scripts/sft_hh.py
+/
+sbatch launch.sh
 ``` 
 or
 ```bash
-bash run_record.sh
+sbatch launch.sh
+``` 
+
+4. Upload to HuggingFace:
+```bash
+sbatch upload.sh
+``` 
+
+5. Evals - lm-evaluation harness:
+Clone repo - switch to big refactor branch. Create new env and install. Run: 
+```bash
+sbatch evaluate.sh
 ``` 

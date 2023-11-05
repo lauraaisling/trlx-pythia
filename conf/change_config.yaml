@@ -1,25 +1,34 @@
 model: 
-  model_path: "EleutherAI/pythia-70m"
+  model_size: "70m" # 70m 160m 410m 1b 1.4b 2.8b 6.9b 12b 
+  model_path: "EleutherAI/pythia-${model.model_size}"
 
 tokenizer: 
-  tokenizer_path: "EleutherAI/pythia-70m"
+  tokenizer_path: "${model.model_path}"
 
 train: 
   batch_size: 32
-  checkpoint_interval: 100
-  eval_interval: 100
-  checkpoint_dir: "checkpoints/sft_hh/pythia-70m"
-  project_name: "sft-pythia-test"
-  group_name: "pythia-70m"
-  # run_name: "${group_name}_${optimizer}_${lr}"
+  total_steps: 1000000 
+  checkpoint_interval: 1000
+  eval_interval: 500
+  checkpoint_dir: "checkpoints/sft_hh/pythia-${model.model_size}"
+  project_name: "sft-pythia"
+  group_name: "${model.model_size}"
+  run_name: "${model.model_size}_${optimizer.name}_${optimizer.lr}"
   seed: 0
+  save_optimizer: false 
+
+method:
+  max_new_tokens: 128
+  gen_kwargs:
+    top_k: 20
 
 optimizer: 
-  name: "adamw"
-  # lr: 1.0e-6
-  # betas: (0.9, 0.95)
-  # eps: 1.0e-8
-  # weight_decay: 1.0e-6
+  name: "adamw_8bit_bnb" # "rmsprop" # "adamw"
+  # for adamw
+  lr: 1.0e-6
+  betas: (0.9, 0.95)
+  eps: 1.0e-8
+  weight_decay: 1.0e-6
 
 scheduler: 
   name: "cosine_annealing"
