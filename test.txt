@@ -1,5 +1,1 @@
-nvidia smi:
-srun --account eleuther --partition=g40x --nodes=1 --gpus=8 --cpus-per-gpu=12 nvidia-smi 
-
-launch interactive session:
-srun --account eleuther --partition=g40x --gpus=8 --cpus-per-gpu=12 --job-name=test-sft-pythia --pty bash -i
+test

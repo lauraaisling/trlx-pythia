@@ -52,7 +52,7 @@ default_config = TRLConfig(
     ),
     model=ModelConfig(model_path="EleutherAI/pythia-70m", num_layers_unfrozen=-1),
     tokenizer=TokenizerConfig(tokenizer_path="EleutherAI/pythia-70m", truncation_side="left"),
-    optimizer=OptimizerConfig(name="adamw", kwargs=dict()),#lr=1e-6, betas=(0.9, 0.95), eps=1.0e-8, weight_decay=1.0e-6)), 
+    optimizer=OptimizerConfig(name="adamw", kwargs=dict(lr=1e-6, betas=(0.9, 0.95), eps=1.0e-8, weight_decay=1.0e-6)), 
     scheduler=SchedulerConfig(name="cosine_annealing", kwargs=dict(T_max=100000000, eta_min=1e-6)),
     method=SFTConfig(
         name="sftconfig",

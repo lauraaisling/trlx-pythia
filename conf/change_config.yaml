@@ -23,7 +23,7 @@ method:
     top_k: 20
 
 optimizer: 
-  name: "adamw_8bit_bnb" # "rmsprop" # "adamw"
+  name: "adamw" # "rmsprop" # "adamw" adamw_8bit_bnb
   # for adamw
   lr: 1.0e-6
   betas: (0.9, 0.95)
