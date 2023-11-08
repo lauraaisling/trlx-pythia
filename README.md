@@ -34,24 +34,29 @@ set up wandb tracker
 wandb login --relogin
 ``` 
 
-3. Adjust hyperparameters and run code
+3. Adjust hyperparameters, accelerate configs... and run code
 ```bash
 accelerate launch --config_file accelerate_config.yaml scripts/sft_hh.py
 /
-sbatch launch.sh
+sbatch shell_scripts/launch.sh
 ``` 
 or
 ```bash
-sbatch launch.sh
+sbatch shell_scripts/launch.sh
 ``` 
 
 4. Upload to HuggingFace:
 ```bash
-sbatch upload.sh
+sbatch shell_scripts/upload.sh
 ``` 
 
 5. Evals - lm-evaluation harness:
 Clone repo - switch to big refactor branch. Create new env and install. Run: 
 ```bash
-sbatch evaluate.sh
+sbatch shell_scripts/evaluate.sh
 ``` 
+
+## Notes:
+[wandb runs](https://wandb.ai/lauraomahony999/sft-pythia)
+
+HuggingFace: lomahony/ TODO
