@@ -57,6 +57,6 @@ sbatch shell_scripts/evaluate.sh
 ``` 
 
 ## Notes:
-[wandb runs](https://wandb.ai/lauraomahony999/sft-pythia)
+[wandb runs](https://wandb.ai/lauraomahony999/sft-pythia){:target="_blank"} 
 
 HuggingFace: lomahony/ TODO

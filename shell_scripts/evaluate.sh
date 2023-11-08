@@ -1,6 +1,6 @@
 #!/bin/bash
 # download https://github.com/EleutherAI/lm-evaluation-harness and run in lm-evaluation-harness directory
-# sbatch evaluate.sh
+# sbatch shell_scripts/evaluate.sh
 #Resource Request 
 #SBATCH --account=eleuther
 #SBATCH --job-name=sft-pythia
