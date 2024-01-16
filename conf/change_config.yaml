@@ -12,7 +12,7 @@ train:
   checkpoint_interval: 1000
   eval_interval: 500
   checkpoint_dir: "checkpoints/ppo_hh/pythia-${model.model_size}"
-  project_name: "ppo-pythia"
+  project_name: "pythia-ppo-test"
   group_name: "${model.model_size}"
   run_name: "${model.model_size}_${optimizer.name}_${optimizer.lr}"
   seed: 0

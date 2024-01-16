@@ -29,7 +29,7 @@ from trlx.data.default_configs import (
 default_config = TRLConfig(
     train=TrainConfig(
         seq_length=1024,
-        epochs=1,
+        epochs=10000, #1,
         total_steps=10000000,
         batch_size=32,
         checkpoint_interval=1000,
@@ -41,6 +41,7 @@ default_config = TRLConfig(
         entity_name = 'lauraomahony999',
         project_name = 'ppo-pythia',
         group_name = "pythia-70m",
+        save_best = False
     ),
     model=ModelConfig(model_path="lomahony/pythia-70m-helpful-sft", num_layers_unfrozen=-1),
     tokenizer=TokenizerConfig(tokenizer_path="lomahony/pythia-70m-helpful-sft", truncation_side="left"),
@@ -223,7 +224,7 @@ def main(config: DictConfig):
         # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/do2vbz2o
         default_config.train.batch_size = 8
         default_config.train.seq_length = 1024
-        default_config.train.total_steps = 750
+        default_config.train.total_steps = 750 #################################################
         default_config.model.model_path = "lomahony/pythia-70m-helpful-sft"
         default_config.model.num_layers_unfrozen = 4
         default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-70m/"
@@ -256,11 +257,11 @@ def main(config: DictConfig):
         default_config.train.batch_size = 8
         default_config.train.total_steps = 750
         default_config.train.seq_length = 1024
+        default_config.model.model_path = "pythia-410m-helpful-sft"
         default_config.model.num_layers_unfrozen = 4 #### 3
         default_config.optimizer.kwargs["lr"] = 2.2e-7
         default_config.scheduler.kwargs["eta_min"] = 2.2e-7
         default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-410m"
-        default_config.model.model_path = "lomahony/pythia-410m-helpful-sft"
         default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-410m"
         default_config.method.chunk_size = 4
         default_config.method.num_rollouts = 48
@@ -274,7 +275,7 @@ def main(config: DictConfig):
         default_config.optimizer.kwargs["lr"] = 6e-6
         default_config.optimizer.kwargs["weight_decay"] = 0.0002
         default_config.scheduler.kwargs["eta_min"] = 6e-6
-        default_config.train.checkpoint_dir = "checkpoints/ppo_hh_1B"
+        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-1B"
         default_config.model.model_path = "lomahony/pythia-1b-helpful-sft"
         default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
         default_config.method.chunk_size = 16
@@ -319,16 +320,17 @@ def main(config: DictConfig):
     eval_prompts = [{"prompt": x["prompt"], "original_output": x["chosen"]} for x in islice(dataset["test"], 280)]
     reward_fn = create_reward_fn()
 
-    trainer, eval_stats = trlx.train(
+    # trainer, eval_stats = # /n
+    trlx.train(
         prompts=prompts,
         eval_prompts=eval_prompts,
         reward_fn=reward_fn,
         config=final_config,
         stop_sequences=["Human:", "human:", "Assistant:", "assistant:"],
     )
-    if trainer.accelerator.is_main_process:
-        trainer.accelerator.print("\n"*100)
-        trainer.accelerator.print(eval_stats["reward/mean"])
+    # if trainer.accelerator.is_main_process:
+    #     trainer.accelerator.print("\n"*100)
+    #     trainer.accelerator.print(eval_stats["reward/mean"])
 
 
 if __name__ == "__main__":

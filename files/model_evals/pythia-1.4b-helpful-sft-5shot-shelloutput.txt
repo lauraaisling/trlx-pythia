@@ -1,0 +1,452 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `8`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+2024-01-16:16:54:42,294 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,294 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,294 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,294 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,359 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,359 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,436 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,437 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,437 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,437 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,442 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,442 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,461 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,461 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,516 INFO     [utils.py:145] Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-01-16:16:54:42,516 INFO     [utils.py:148] Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-01-16:16:54:42,879 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:42,880 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:42,888 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:42,962 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:42,963 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:42,994 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:43,013 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:43,090 INFO     [config.py:58] PyTorch version 2.1.2 available.
+2024-01-16:16:54:47,580 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,581 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,582 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,618 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,622 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,666 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,675 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:47,688 INFO     [__main__.py:156] Verbosity set to INFO
+2024-01-16:16:54:55,134 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,135 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,152 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,153 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,271 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,366 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:54:55,550 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+2024-01-16:16:54:56,276 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hails/mmlu_no_train contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hails/mmlu_no_train
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+2024-01-16:16:55:50,980 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:50,989 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:51,227 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:51,233 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:51,388 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:51,392 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:51,440 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:51,444 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:52,113 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:52,117 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:52,661 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:52,665 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:53,012 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:53,016 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+2024-01-16:16:55:53,314 WARNING  [__init__.py:194] Some tasks could not be loaded due to missing dependencies. Run with `--verbosity DEBUG` for full details.
+2024-01-16:16:55:53,318 INFO     [__main__.py:229] Selected Tasks: ['arc_challenge', 'arc_easy', 'boolq', 'hellaswag', 'lambada_openai', 'openbookqa', 'piqa', 'sciq', 'wikitext', 'winogrande']
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-01-16:16:56:00,508 INFO     [huggingface.py:298] Using 8 devices with data parallelism
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-01-16:16:56:07,788 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:07,788 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+2024-01-16:16:56:08,035 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,035 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+2024-01-16:16:56:08,119 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,119 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+2024-01-16:16:56:08,184 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,184 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+2024-01-16:16:56:08,285 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,285 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+2024-01-16:16:56:08,531 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,531 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+2024-01-16:16:56:08,660 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:08,660 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+2024-01-16:16:56:09,185 WARNING  [task.py:600] [Task: boolq] metric acc is defined, but aggregation is not. using default aggregation=mean
+2024-01-16:16:56:09,185 WARNING  [task.py:612] [Task: boolq] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+/admin/home-laura/venvs/venv-lm-evaluation-harness/lib/python3.10/site-packages/datasets/load.py:1429: FutureWarning: The repository for hellaswag contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/hellaswag
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+2024-01-16:16:56:17,086 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,086 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,109 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,109 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,132 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,132 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,228 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,228 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,372 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,372 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,547 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,547 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,821 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:17,821 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:18,225 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:18,225 WARNING  [task.py:284] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2024-01-16:16:56:28,520 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,520 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,520 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,520 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,520 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,520 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,565 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,565 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,565 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,565 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,565 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,566 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,846 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,846 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,846 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,846 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,846 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,846 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,871 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,871 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,871 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,871 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,871 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,871 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,911 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,911 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,911 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,911 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,911 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,911 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,931 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,931 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,931 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,931 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,931 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,931 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,952 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,952 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,952 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:28,952 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:28,952 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:28,952 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:29,781 WARNING  [task.py:600] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:29,781 WARNING  [task.py:612] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:29,781 WARNING  [task.py:600] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2024-01-16:16:56:29,781 WARNING  [task.py:612] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:29,781 WARNING  [task.py:600] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2024-01-16:16:56:29,781 WARNING  [task.py:612] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,275 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,275 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,508 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,509 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:56:33,574 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,575 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,575 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,628 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,628 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:56:33,752 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,752 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,752 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,752 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,752 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,753 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,753 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,753 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,753 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,753 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,753 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:56:33,764 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:33,765 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:33,765 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:34,076 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:34,076 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_challenge from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of arc_easy from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of boolq from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of hellaswag from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of lambada_openai from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of openbookqa from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of piqa from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of sciq from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of wikitext from None to 5
+2024-01-16:16:56:34,829 WARNING  [evaluator.py:141] Overwriting default num_fewshot of winogrande from None to 5
+2024-01-16:16:56:34,829 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:56:48,126 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:56:48,127 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:56:52,645 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:56:54,804 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:06,645 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:14,942 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:15,734 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:17,348 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:18,567 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 5...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 2...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 4...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 7...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 6...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 1...
+2024-01-16:16:57:18,665 INFO     [task.py:337] Building contexts for task on rank 3...
+2024-01-16:16:57:18,666 INFO     [task.py:337] Building contexts for task on rank 0...
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+2024-01-16:16:57:18,716 INFO     [evaluator.py:314] Running loglikelihood requests
+  0%|          | 0/9788 [00:00<?, ?it/s]  0%|          | 1/9788 [00:02<6:18:50,  2.32s/it]  0%|          | 17/9788 [00:02<20:48,  7.83it/s]   0%|          | 33/9788 [00:03<11:56, 13.62it/s]  1%|          | 49/9788 [00:03<08:36, 18.87it/s]  1%|          | 65/9788 [00:04<07:16, 22.27it/s]  1%|          | 81/9788 [00:04<06:29, 24.92it/s]  1%|          | 97/9788 [00:05<05:48, 27.84it/s]  1%|          | 113/9788 [00:05<05:30, 29.29it/s]  1%|▏         | 129/9788 [00:06<05:15, 30.58it/s]  1%|▏         | 145/9788 [00:06<05:04, 31.63it/s]  2%|▏         | 161/9788 [00:07<04:52, 32.87it/s]  2%|▏         | 177/9788 [00:07<04:44, 33.84it/s]  2%|▏         | 193/9788 [00:08<04:32, 35.18it/s]  2%|▏         | 209/9788 [00:08<04:17, 37.21it/s]  2%|▏         | 225/9788 [00:08<04:06, 38.86it/s]  2%|▏         | 241/9788 [00:09<04:04, 39.03it/s]  3%|▎         | 257/9788 [00:09<03:55, 40.48it/s]  3%|▎         | 273/9788 [00:09<03:47, 41.83it/s]  3%|▎         | 289/9788 [00:10<03:40, 43.05it/s]  3%|▎         | 305/9788 [00:10<03:34, 44.15it/s]  3%|▎         | 321/9788 [00:10<03:36, 43.78it/s]  3%|▎         | 337/9788 [00:11<03:30, 44.94it/s]  4%|▎         | 353/9788 [00:11<03:31, 44.68it/s]  4%|▍         | 369/9788 [00:11<03:31, 44.55it/s]  4%|▍         | 385/9788 [00:12<03:29, 44.85it/s]  4%|▍         | 401/9788 [00:12<03:22, 46.27it/s]  4%|▍         | 417/9788 [00:13<03:22, 46.23it/s]  4%|▍         | 433/9788 [00:13<03:22, 46.29it/s]  5%|▍         | 449/9788 [00:13<03:21, 46.41it/s]  5%|▍         | 465/9788 [00:14<03:18, 46.89it/s]  5%|▍         | 481/9788 [00:14<03:11, 48.52it/s]  5%|▌         | 497/9788 [00:14<03:11, 48.45it/s]  5%|▌         | 513/9788 [00:14<03:11, 48.54it/s]  5%|▌         | 529/9788 [00:15<03:10, 48.64it/s]  6%|▌         | 545/9788 [00:15<03:09, 48.74it/s]  6%|▌         | 561/9788 [00:15<03:03, 50.26it/s]  6%|▌         | 577/9788 [00:16<02:57, 52.03it/s]  6%|▌         | 593/9788 [00:16<02:58, 51.65it/s]  6%|▌         | 609/9788 [00:16<02:52, 53.20it/s]  6%|▋         | 625/9788 [00:17<02:50, 53.81it/s]  7%|▋         | 641/9788 [00:17<02:52, 53.11it/s]  7%|▋         | 657/9788 [00:17<02:53, 52.62it/s]  7%|▋         | 673/9788 [00:18<02:47, 54.37it/s]  7%|▋         | 689/9788 [00:18<02:45, 55.10it/s]  7%|▋         | 705/9788 [00:18<02:42, 55.75it/s]  7%|▋         | 721/9788 [00:18<02:44, 54.97it/s]  8%|▊         | 737/9788 [00:19<02:39, 56.71it/s]  8%|▊         | 753/9788 [00:19<02:40, 56.30it/s]  8%|▊         | 769/9788 [00:19<02:39, 56.62it/s]  8%|▊         | 785/9788 [00:19<02:33, 58.72it/s]  8%|▊         | 801/9788 [00:20<02:33, 58.47it/s]  8%|▊         | 817/9788 [00:20<02:33, 58.44it/s]  9%|▊         | 833/9788 [00:20<02:32, 58.59it/s]  9%|▊         | 849/9788 [00:21<02:31, 58.92it/s]  9%|▉         | 865/9788 [00:21<02:26, 60.74it/s]  9%|▉         | 881/9788 [00:21<02:25, 61.06it/s]  9%|▉         | 897/9788 [00:21<02:21, 62.68it/s]  9%|▉         | 913/9788 [00:22<02:21, 62.81it/s]  9%|▉         | 929/9788 [00:22<02:16, 64.85it/s] 10%|▉         | 945/9788 [00:22<02:16, 64.56it/s] 10%|▉         | 961/9788 [00:22<02:16, 64.63it/s] 10%|▉         | 977/9788 [00:23<02:15, 64.79it/s] 10%|█         | 993/9788 [00:23<02:15, 65.04it/s] 10%|█         | 1009/9788 [00:23<02:10, 67.34it/s] 10%|█         | 1025/9788 [00:23<02:08, 68.06it/s] 11%|█         | 1041/9788 [00:23<02:07, 68.63it/s] 11%|█         | 1057/9788 [00:24<02:02, 71.03it/s] 11%|█         | 1073/9788 [00:24<02:00, 72.26it/s] 11%|█         | 1089/9788 [00:24<02:01, 71.77it/s] 11%|█▏        | 1105/9788 [00:24<01:58, 73.54it/s] 11%|█▏        | 1121/9788 [00:24<01:59, 72.81it/s] 12%|█▏        | 1137/9788 [00:25<01:59, 72.30it/s] 12%|█▏        | 1153/9788 [00:25<01:57, 73.49it/s] 12%|█▏        | 1169/9788 [00:25<01:54, 75.01it/s] 12%|█▏        | 1185/9788 [00:25<01:56, 74.06it/s] 12%|█▏        | 1201/9788 [00:26<01:56, 73.48it/s] 12%|█▏        | 1217/9788 [00:26<01:54, 74.58it/s] 13%|█▎        | 1233/9788 [00:26<01:55, 73.86it/s] 13%|█▎        | 1249/9788 [00:26<01:52, 75.71it/s] 13%|█▎        | 1265/9788 [00:26<01:51, 76.48it/s] 13%|█▎        | 1281/9788 [00:27<01:52, 75.46it/s] 13%|█▎        | 1297/9788 [00:27<01:53, 74.84it/s] 13%|█▎        | 1313/9788 [00:27<01:51, 75.91it/s] 14%|█▎        | 1329/9788 [00:27<01:49, 77.34it/s] 14%|█▎        | 1345/9788 [00:27<01:48, 77.81it/s] 14%|█▍        | 1361/9788 [00:28<01:50, 76.57it/s] 14%|█▍        | 1377/9788 [00:28<01:50, 75.81it/s] 14%|█▍        | 1393/9788 [00:28<01:49, 76.78it/s] 14%|█▍        | 1409/9788 [00:28<01:48, 77.45it/s] 15%|█▍        | 1425/9788 [00:29<01:49, 76.37it/s] 15%|█▍        | 1441/9788 [00:29<01:50, 75.86it/s] 15%|█▍        | 1457/9788 [00:29<01:50, 75.58it/s] 15%|█▌        | 1473/9788 [00:29<01:48, 76.87it/s] 15%|█▌        | 1489/9788 [00:29<01:48, 76.28it/s] 15%|█▌        | 1505/9788 [00:30<01:46, 77.44it/s] 16%|█▌        | 1521/9788 [00:30<01:44, 79.01it/s] 16%|█▌        | 1537/9788 [00:30<01:45, 77.85it/s] 16%|█▌        | 1553/9788 [00:30<01:44, 78.68it/s] 16%|█▌        | 1569/9788 [00:30<01:43, 79.24it/s] 16%|█▌        | 1585/9788 [00:31<01:42, 79.73it/s] 16%|█▋        | 1601/9788 [00:31<01:44, 78.43it/s] 17%|█▋        | 1617/9788 [00:31<01:43, 79.12it/s] 17%|█▋        | 1633/9788 [00:31<01:41, 80.70it/s] 17%|█▋        | 1649/9788 [00:31<01:41, 79.81it/s] 17%|█▋        | 1665/9788 [00:32<01:41, 80.40it/s] 17%|█▋        | 1681/9788 [00:32<01:41, 79.64it/s] 17%|█▋        | 1697/9788 [00:32<01:40, 80.37it/s] 18%|█▊        | 1713/9788 [00:32<01:41, 79.70it/s] 18%|█▊        | 1729/9788 [00:32<01:40, 80.48it/s] 18%|█▊        | 1745/9788 [00:33<01:40, 79.79it/s] 18%|█▊        | 1761/9788 [00:33<01:38, 81.33it/s] 18%|█▊        | 1777/9788 [00:33<01:39, 80.37it/s] 18%|█▊        | 1793/9788 [00:33<01:38, 81.09it/s] 18%|█▊        | 1809/9788 [00:33<01:39, 80.32it/s] 19%|█▊        | 1825/9788 [00:34<01:38, 81.11it/s] 19%|█▉        | 1841/9788 [00:34<01:37, 81.70it/s] 19%|█▉        | 1857/9788 [00:34<01:38, 80.79it/s] 19%|█▉        | 1873/9788 [00:34<01:36, 82.42it/s] 19%|█▉        | 1889/9788 [00:34<01:36, 81.54it/s] 19%|█▉        | 1905/9788 [00:35<01:35, 82.31it/s] 20%|█▉        | 1921/9788 [00:35<01:34, 82.82it/s] 20%|█▉        | 1937/9788 [00:35<01:34, 83.28it/s] 20%|█▉        | 1953/9788 [00:35<01:33, 83.56it/s] 20%|██        | 1969/9788 [00:35<01:34, 82.38it/s] 20%|██        | 1985/9788 [00:35<01:34, 82.98it/s] 20%|██        | 2001/9788 [00:36<01:34, 82.09it/s] 21%|██        | 2017/9788 [00:36<01:35, 81.43it/s] 21%|██        | 2033/9788 [00:36<01:33, 83.12it/s] 21%|██        | 2049/9788 [00:36<01:34, 82.23it/s] 21%|██        | 2065/9788 [00:36<01:34, 81.58it/s] 21%|██▏       | 2081/9788 [00:37<01:33, 82.51it/s] 21%|██▏       | 2097/9788 [00:37<01:33, 81.85it/s] 22%|██▏       | 2113/9788 [00:37<01:32, 82.77it/s] 22%|██▏       | 2129/9788 [00:37<01:31, 83.38it/s] 22%|██▏       | 2145/9788 [00:37<01:32, 82.50it/s] 22%|██▏       | 2161/9788 [00:38<01:31, 83.26it/s] 22%|██▏       | 2177/9788 [00:38<01:30, 83.79it/s] 22%|██▏       | 2193/9788 [00:38<01:31, 82.84it/s] 23%|██▎       | 2209/9788 [00:38<01:32, 82.07it/s] 23%|██▎       | 2225/9788 [00:38<01:30, 83.87it/s] 23%|██▎       | 2241/9788 [00:39<01:30, 83.04it/s] 23%|██▎       | 2257/9788 [00:39<01:29, 83.84it/s] 23%|██▎       | 2273/9788 [00:39<01:30, 83.11it/s] 23%|██▎       | 2289/9788 [00:39<01:30, 82.58it/s] 24%|██▎       | 2305/9788 [00:39<01:29, 83.60it/s] 24%|██▎       | 2321/9788 [00:40<01:28, 84.26it/s] 24%|██▍       | 2337/9788 [00:40<01:29, 83.43it/s] 24%|██▍       | 2353/9788 [00:40<01:28, 84.18it/s] 24%|██▍       | 2369/9788 [00:40<01:27, 84.69it/s] 24%|██▍       | 2385/9788 [00:40<01:28, 83.73it/s] 25%|██▍       | 2401/9788 [00:40<01:28, 83.08it/s] 25%|██▍       | 2417/9788 [00:41<01:25, 85.80it/s] 25%|██▍       | 2433/9788 [00:41<01:25, 85.57it/s] 25%|██▌       | 2449/9788 [00:41<01:26, 85.32it/s] 25%|██▌       | 2465/9788 [00:41<01:24, 86.67it/s] 25%|██▌       | 2481/9788 [00:41<01:24, 86.23it/s] 26%|██▌       | 2497/9788 [00:42<01:25, 85.74it/s] 26%|██▌       | 2513/9788 [00:42<01:23, 86.98it/s] 26%|██▌       | 2529/9788 [00:42<01:22, 87.87it/s] 26%|██▌       | 2545/9788 [00:42<01:23, 87.11it/s] 26%|██▌       | 2561/9788 [00:42<01:23, 86.49it/s] 26%|██▋       | 2577/9788 [00:42<01:22, 87.57it/s] 26%|██▋       | 2593/9788 [00:43<01:22, 86.90it/s] 27%|██▋       | 2609/9788 [00:43<01:22, 86.50it/s] 27%|██▋       | 2625/9788 [00:43<01:20, 88.67it/s] 27%|██▋       | 2641/9788 [00:43<01:19, 90.21it/s] 27%|██▋       | 2657/9788 [00:43<01:20, 88.91it/s] 27%|██▋       | 2673/9788 [00:44<01:20, 88.02it/s] 27%|██▋       | 2689/9788 [00:44<01:19, 88.93it/s] 28%|██▊       | 2705/9788 [00:44<01:19, 89.54it/s] 28%|██▊       | 2721/9788 [00:44<01:19, 88.51it/s] 28%|██▊       | 2737/9788 [00:44<01:20, 87.77it/s] 28%|██▊       | 2753/9788 [00:44<01:19, 88.77it/s] 28%|██▊       | 2769/9788 [00:45<01:18, 89.49it/s] 28%|██▊       | 2785/9788 [00:45<01:19, 88.48it/s] 29%|██▊       | 2801/9788 [00:45<01:19, 87.83it/s] 29%|██▉       | 2817/9788 [00:45<01:18, 88.91it/s] 29%|██▉       | 2833/9788 [00:45<01:17, 89.66it/s] 29%|██▉       | 2849/9788 [00:46<01:16, 90.16it/s] 29%|██▉       | 2865/9788 [00:46<01:17, 89.01it/s] 29%|██▉       | 2881/9788 [00:46<01:18, 88.23it/s] 30%|██▉       | 2897/9788 [00:46<01:16, 90.13it/s] 30%|██▉       | 2913/9788 [00:46<01:15, 91.53it/s] 30%|██▉       | 2929/9788 [00:46<01:14, 92.43it/s] 30%|███       | 2945/9788 [00:47<01:15, 90.67it/s] 30%|███       | 2961/9788 [00:47<01:16, 89.45it/s] 30%|███       | 2977/9788 [00:47<01:15, 90.14it/s] 31%|███       | 2993/9788 [00:47<01:14, 90.62it/s] 31%|███       | 3009/9788 [00:47<01:15, 89.50it/s] 31%|███       | 3025/9788 [00:48<01:16, 88.75it/s] 31%|███       | 3041/9788 [00:48<01:15, 89.72it/s] 31%|███       | 3057/9788 [00:48<01:14, 90.40it/s] 31%|███▏      | 3073/9788 [00:48<01:15, 89.43it/s] 32%|███▏      | 3089/9788 [00:48<01:15, 88.69it/s] 32%|███▏      | 3105/9788 [00:48<01:15, 88.21it/s] 32%|███▏      | 3121/9788 [00:49<01:14, 89.37it/s] 32%|███▏      | 3137/9788 [00:49<01:13, 90.17it/s] 32%|███▏      | 3153/9788 [00:49<01:14, 89.36it/s] 32%|███▏      | 3169/9788 [00:49<01:14, 88.72it/s] 33%|███▎      | 3185/9788 [00:49<01:12, 91.56it/s] 33%|███▎      | 3201/9788 [00:49<01:10, 93.68it/s] 33%|███▎      | 3217/9788 [00:50<01:09, 95.18it/s] 33%|███▎      | 3233/9788 [00:50<01:09, 94.20it/s] 33%|███▎      | 3249/9788 [00:50<01:08, 95.10it/s] 33%|███▎      | 3265/9788 [00:50<01:08, 95.84it/s] 34%|███▎      | 3281/9788 [00:50<01:07, 96.34it/s] 34%|███▎      | 3297/9788 [00:50<01:08, 95.06it/s] 34%|███▍      | 3313/9788 [00:51<01:08, 94.14it/s] 34%|███▍      | 3329/9788 [00:51<01:07, 95.14it/s] 34%|███▍      | 3345/9788 [00:51<01:07, 95.79it/s] 34%|███▍      | 3361/9788 [00:51<01:07, 94.68it/s] 35%|███▍      | 3377/9788 [00:51<01:08, 93.96it/s] 35%|███▍      | 3393/9788 [00:51<01:07, 95.04it/s] 35%|███▍      | 3409/9788 [00:52<01:06, 95.72it/s] 35%|███▍      | 3425/9788 [00:52<01:07, 94.72it/s] 35%|███▌      | 3441/9788 [00:52<01:07, 94.04it/s] 35%|███▌      | 3457/9788 [00:52<01:07, 93.53it/s] 35%|███▌      | 3473/9788 [00:52<01:06, 95.40it/s] 36%|███▌      | 3489/9788 [00:52<01:05, 96.76it/s] 36%|███▌      | 3505/9788 [00:53<01:05, 95.65it/s] 36%|███▌      | 3521/9788 [00:53<01:06, 94.90it/s] 36%|███▌      | 3537/9788 [00:53<01:06, 94.30it/s] 36%|███▋      | 3553/9788 [00:53<01:05, 95.58it/s] 36%|███▋      | 3569/9788 [00:53<01:04, 96.43it/s] 37%|███▋      | 3585/9788 [00:53<01:04, 95.45it/s] 37%|███▋      | 3601/9788 [00:54<01:05, 94.72it/s] 37%|███▋      | 3617/9788 [00:54<01:04, 95.93it/s] 37%|███▋      | 3633/9788 [00:54<01:04, 95.13it/s] 37%|███▋      | 3649/9788 [00:54<01:04, 94.62it/s] 37%|███▋      | 3665/9788 [00:54<01:03, 95.94it/s] 38%|███▊      | 3681/9788 [00:54<01:03, 96.81it/s] 38%|███▊      | 3697/9788 [00:55<01:03, 95.80it/s] 38%|███▊      | 3713/9788 [00:55<01:02, 97.42it/s] 38%|███▊      | 3729/9788 [00:55<01:01, 98.51it/s] 38%|███▊      | 3745/9788 [00:55<01:00, 99.30it/s] 38%|███▊      | 3761/9788 [00:55<01:01, 97.73it/s] 39%|███▊      | 3777/9788 [00:55<01:02, 96.66it/s] 39%|███▉      | 3793/9788 [00:56<01:02, 95.86it/s] 39%|███▉      | 3809/9788 [00:56<01:01, 97.03it/s] 39%|███▉      | 3825/9788 [00:56<01:00, 97.80it/s] 39%|███▉      | 3841/9788 [00:56<01:01, 96.68it/s] 39%|███▉      | 3857/9788 [00:56<01:01, 95.96it/s] 40%|███▉      | 3873/9788 [00:56<01:01, 95.42it/s] 40%|███▉      | 3889/9788 [00:57<01:00, 96.76it/s] 40%|███▉      | 3905/9788 [00:57<01:00, 97.70it/s] 40%|████      | 3921/9788 [00:57<01:00, 96.73it/s] 40%|████      | 3937/9788 [00:57<01:00, 96.06it/s] 40%|████      | 3953/9788 [00:57<01:01, 95.56it/s] 41%|████      | 3969/9788 [00:57<01:00, 96.89it/s] 41%|████      | 3985/9788 [00:58<00:59, 97.79it/s] 41%|████      | 4001/9788 [00:58<00:59, 96.80it/s] 41%|████      | 4017/9788 [00:58<01:00, 96.12it/s] 41%|████      | 4033/9788 [00:58<00:58, 97.83it/s] 41%|████▏     | 4049/9788 [00:58<00:57, 99.08it/s] 42%|████▏     | 4065/9788 [00:58<00:58, 97.77it/s] 42%|████▏     | 4081/9788 [00:59<00:58, 96.89it/s] 42%|████▏     | 4097/9788 [00:59<00:59, 96.22it/s] 42%|████▏     | 4113/9788 [00:59<00:58, 97.54it/s] 42%|████▏     | 4129/9788 [00:59<00:57, 98.47it/s] 42%|████▏     | 4145/9788 [00:59<00:56, 99.09it/s] 43%|████▎     | 4161/9788 [00:59<00:57, 97.85it/s] 43%|████▎     | 4177/9788 [01:00<00:56, 98.79it/s] 43%|████▎     | 4193/9788 [01:00<00:56, 99.46it/s] 43%|████▎     | 4209/9788 [01:00<00:56, 98.19it/s] 43%|████▎     | 4225/9788 [01:00<00:57, 97.32it/s] 43%|████▎     | 4241/9788 [01:00<00:56, 98.45it/s] 43%|████▎     | 4257/9788 [01:00<00:55, 99.21it/s] 44%|████▎     | 4273/9788 [01:01<00:56, 98.07it/s] 44%|████▍     | 4289/9788 [01:01<00:56, 97.32it/s] 44%|████▍     | 4305/9788 [01:01<00:55, 99.26it/s] 44%|████▍     | 4321/9788 [01:01<00:54, 100.64it/s] 44%|████▍     | 4337/9788 [01:01<00:53, 101.67it/s] 44%|████▍     | 4353/9788 [01:01<00:54, 100.16it/s] 45%|████▍     | 4369/9788 [01:01<00:54, 99.08it/s]  45%|████▍     | 4385/9788 [01:02<00:53, 100.09it/s] 45%|████▍     | 4401/9788 [01:02<00:53, 100.86it/s] 45%|████▌     | 4417/9788 [01:02<00:52, 101.38it/s] 45%|████▌     | 4433/9788 [01:02<00:53, 99.94it/s]  45%|████▌     | 4449/9788 [01:02<00:53, 98.95it/s] 46%|████▌     | 4465/9788 [01:02<00:53, 100.12it/s] 46%|████▌     | 4481/9788 [01:03<00:52, 100.92it/s] 46%|████▌     | 4497/9788 [01:03<00:53, 99.74it/s]  46%|████▌     | 4513/9788 [01:03<00:53, 98.77it/s] 46%|████▋     | 4529/9788 [01:03<00:52, 99.99it/s] 46%|████▋     | 4545/9788 [01:03<00:52, 100.77it/s] 47%|████▋     | 4561/9788 [01:03<00:52, 99.68it/s]  47%|████▋     | 4577/9788 [01:04<00:51, 101.22it/s] 47%|████▋     | 4593/9788 [01:04<00:50, 102.30it/s] 47%|████▋     | 4609/9788 [01:04<00:51, 100.76it/s] 47%|████▋     | 4625/9788 [01:04<00:51, 99.71it/s]  47%|████▋     | 4641/9788 [01:04<00:51, 100.82it/s] 48%|████▊     | 4657/9788 [01:04<00:51, 99.80it/s]  48%|████▊     | 4673/9788 [01:05<00:51, 99.14it/s] 48%|████▊     | 4689/9788 [01:05<00:51, 98.60it/s] 48%|████▊     | 4705/9788 [01:05<00:50, 100.06it/s] 48%|████▊     | 4721/9788 [01:05<00:50, 101.06it/s] 48%|████▊     | 4737/9788 [01:05<00:50, 100.05it/s] 49%|████▊     | 4753/9788 [01:05<00:50, 99.26it/s]  49%|████▊     | 4769/9788 [01:05<00:49, 100.55it/s] 49%|████▉     | 4785/9788 [01:06<00:50, 99.77it/s]  49%|████▉     | 4801/9788 [01:06<00:50, 99.23it/s] 49%|████▉     | 4817/9788 [01:06<00:48, 101.48it/s] 49%|████▉     | 4833/9788 [01:06<00:48, 103.07it/s] 50%|████▉     | 4849/9788 [01:06<00:48, 101.86it/s] 50%|████▉     | 4865/9788 [01:06<00:48, 100.99it/s] 50%|████▉     | 4881/9788 [01:07<00:48, 102.21it/s] 50%|█████     | 4897/9788 [01:07<00:47, 103.07it/s] 50%|█████     | 4913/9788 [01:07<00:47, 101.86it/s] 50%|█████     | 4929/9788 [01:07<00:48, 101.01it/s] 51%|█████     | 4945/9788 [01:07<00:47, 102.27it/s] 51%|█████     | 4961/9788 [01:07<00:46, 103.16it/s] 51%|█████     | 4977/9788 [01:08<00:47, 102.04it/s] 51%|█████     | 4993/9788 [01:08<00:46, 103.13it/s] 51%|█████     | 5009/9788 [01:08<00:46, 103.87it/s] 51%|█████▏    | 5025/9788 [01:08<00:46, 102.58it/s] 52%|█████▏    | 5041/9788 [01:08<00:46, 101.71it/s] 52%|█████▏    | 5057/9788 [01:08<00:45, 103.67it/s] 52%|█████▏    | 5073/9788 [01:08<00:44, 105.07it/s] 52%|█████▏    | 5089/9788 [01:09<00:45, 103.68it/s] 52%|█████▏    | 5105/9788 [01:09<00:44, 104.63it/s] 52%|█████▏    | 5121/9788 [01:09<00:45, 103.43it/s] 52%|█████▏    | 5137/9788 [01:09<00:45, 102.63it/s] 53%|█████▎    | 5153/9788 [01:09<00:44, 103.99it/s] 53%|█████▎    | 5169/9788 [01:09<00:44, 104.88it/s] 53%|█████▎    | 5185/9788 [01:10<00:44, 103.73it/s] 53%|█████▎    | 5201/9788 [01:10<00:44, 102.76it/s] 53%|█████▎    | 5217/9788 [01:10<00:43, 104.08it/s] 53%|█████▎    | 5233/9788 [01:10<00:44, 103.24it/s] 54%|█████▎    | 5249/9788 [01:10<00:44, 102.59it/s] 54%|█████▍    | 5265/9788 [01:10<00:43, 104.83it/s] 54%|█████▍    | 5281/9788 [01:10<00:43, 104.49it/s] 54%|█████▍    | 5297/9788 [01:11<00:43, 104.22it/s] 54%|█████▍    | 5313/9788 [01:11<00:42, 105.39it/s] 54%|█████▍    | 5329/9788 [01:11<00:42, 104.98it/s] 55%|█████▍    | 5345/9788 [01:11<00:42, 104.69it/s] 55%|█████▍    | 5361/9788 [01:11<00:41, 105.87it/s] 55%|█████▍    | 5377/9788 [01:11<00:41, 106.58it/s] 55%|█████▌    | 5393/9788 [01:12<00:41, 105.85it/s] 55%|█████▌    | 5409/9788 [01:12<00:41, 106.73it/s] 55%|█████▌    | 5425/9788 [01:12<00:40, 107.32it/s] 56%|█████▌    | 5441/9788 [01:12<00:40, 106.44it/s] 56%|█████▌    | 5457/9788 [01:12<00:40, 105.78it/s] 56%|█████▌    | 5473/9788 [01:12<00:40, 107.38it/s] 56%|█████▌    | 5489/9788 [01:12<00:40, 106.50it/s] 56%|█████▌    | 5505/9788 [01:13<00:39, 107.35it/s] 56%|█████▋    | 5521/9788 [01:13<00:39, 107.89it/s] 57%|█████▋    | 5537/9788 [01:13<00:39, 106.92it/s] 57%|█████▋    | 5553/9788 [01:13<00:39, 107.65it/s] 57%|█████▋    | 5569/9788 [01:13<00:39, 106.77it/s] 57%|█████▋    | 5585/9788 [01:13<00:39, 107.63it/s] 57%|█████▋    | 5601/9788 [01:13<00:39, 106.88it/s] 57%|█████▋    | 5617/9788 [01:14<00:39, 106.27it/s] 58%|█████▊    | 5633/9788 [01:14<00:37, 109.76it/s] 58%|█████▊    | 5649/9788 [01:14<00:37, 110.09it/s] 58%|█████▊    | 5665/9788 [01:14<00:36, 111.85it/s] 58%|█████▊    | 5681/9788 [01:14<00:36, 111.69it/s] 58%|█████▊    | 5697/9788 [01:14<00:36, 111.46it/s] 58%|█████▊    | 5713/9788 [01:14<00:36, 112.88it/s] 59%|█████▊    | 5729/9788 [01:15<00:35, 114.00it/s] 59%|█████▊    | 5745/9788 [01:15<00:35, 114.72it/s] 59%|█████▉    | 5761/9788 [01:15<00:35, 113.73it/s] 59%|█████▉    | 5777/9788 [01:15<00:34, 115.44it/s] 59%|█████▉    | 5793/9788 [01:15<00:34, 114.31it/s] 59%|█████▉    | 5809/9788 [01:15<00:34, 115.26it/s] 60%|█████▉    | 5825/9788 [01:15<00:34, 114.29it/s] 60%|█████▉    | 5841/9788 [01:16<00:34, 113.67it/s] 60%|█████▉    | 5857/9788 [01:16<00:34, 114.83it/s] 60%|██████    | 5873/9788 [01:16<00:34, 114.15it/s] 60%|██████    | 5889/9788 [01:16<00:33, 115.25it/s] 60%|██████    | 5905/9788 [01:16<00:33, 116.02it/s] 60%|██████    | 5921/9788 [01:16<00:32, 117.77it/s] 61%|██████    | 5937/9788 [01:16<00:33, 116.56it/s] 61%|██████    | 5953/9788 [01:17<00:32, 117.32it/s] 61%|██████    | 5969/9788 [01:17<00:32, 117.90it/s] 61%|██████    | 5985/9788 [01:17<00:32, 116.78it/s] 61%|██████▏   | 6001/9788 [01:17<00:32, 115.95it/s] 61%|██████▏   | 6017/9788 [01:17<00:32, 116.98it/s] 62%|██████▏   | 6033/9788 [01:17<00:32, 116.20it/s] 62%|██████▏   | 6049/9788 [01:17<00:31, 117.22it/s] 62%|██████▏   | 6065/9788 [01:17<00:31, 116.49it/s] 62%|██████▏   | 6081/9788 [01:18<00:31, 118.37it/s] 62%|██████▏   | 6097/9788 [01:18<00:31, 117.34it/s] 62%|██████▏   | 6113/9788 [01:18<00:31, 118.23it/s] 63%|██████▎   | 6129/9788 [01:18<00:31, 117.37it/s] 63%|██████▎   | 6145/9788 [01:18<00:31, 116.70it/s] 63%|██████▎   | 6161/9788 [01:18<00:30, 117.77it/s] 63%|██████▎   | 6177/9788 [01:18<00:30, 117.09it/s] 63%|██████▎   | 6193/9788 [01:19<00:30, 118.17it/s] 63%|██████▎   | 6209/9788 [01:19<00:30, 117.41it/s] 64%|██████▎   | 6225/9788 [01:19<00:29, 119.68it/s] 64%|██████▍   | 6241/9788 [01:19<00:29, 118.88it/s] 64%|██████▍   | 6257/9788 [01:19<00:29, 119.97it/s] 64%|██████▍   | 6273/9788 [01:19<00:29, 120.88it/s] 64%|██████▍   | 6289/9788 [01:19<00:29, 119.88it/s] 64%|██████▍   | 6305/9788 [01:19<00:28, 120.84it/s] 65%|██████▍   | 6321/9788 [01:20<00:28, 119.82it/s] 65%|██████▍   | 6337/9788 [01:20<00:28, 122.00it/s] 65%|██████▍   | 6353/9788 [01:20<00:28, 121.06it/s] 65%|██████▌   | 6369/9788 [01:20<00:28, 122.08it/s] 65%|██████▌   | 6385/9788 [01:20<00:28, 121.18it/s] 65%|██████▌   | 6401/9788 [01:20<00:28, 120.60it/s] 66%|██████▌   | 6417/9788 [01:20<00:27, 121.98it/s] 66%|██████▌   | 6433/9788 [01:21<00:26, 124.35it/s] 66%|██████▌   | 6449/9788 [01:21<00:26, 123.89it/s] 66%|██████▌   | 6465/9788 [01:21<00:26, 125.06it/s] 66%|██████▌   | 6481/9788 [01:21<00:26, 124.46it/s] 66%|██████▋   | 6497/9788 [01:21<00:26, 125.57it/s] 67%|██████▋   | 6513/9788 [01:21<00:25, 126.42it/s] 67%|██████▋   | 6529/9788 [01:21<00:25, 125.51it/s] 67%|██████▋   | 6545/9788 [01:21<00:25, 126.86it/s] 67%|██████▋   | 6561/9788 [01:22<00:25, 126.28it/s] 67%|██████▋   | 6577/9788 [01:22<00:25, 125.98it/s] 67%|██████▋   | 6593/9788 [01:22<00:25, 125.87it/s] 68%|██████▊   | 6609/9788 [01:22<00:24, 128.15it/s] 68%|██████▊   | 6625/9788 [01:22<00:24, 129.21it/s] 68%|██████▊   | 6641/9788 [01:22<00:24, 128.35it/s] 68%|██████▊   | 6657/9788 [01:22<00:24, 129.50it/s] 68%|██████▊   | 6673/9788 [01:22<00:23, 131.52it/s] 68%|██████▊   | 6689/9788 [01:23<00:23, 132.34it/s] 69%|██████▊   | 6705/9788 [01:23<00:23, 132.98it/s] 69%|██████▊   | 6721/9788 [01:23<00:23, 131.93it/s] 69%|██████▉   | 6737/9788 [01:23<00:23, 131.57it/s] 69%|██████▉   | 6753/9788 [01:23<00:22, 132.90it/s] 69%|██████▉   | 6769/9788 [01:23<00:22, 133.92it/s] 69%|██████▉   | 6785/9788 [01:23<00:22, 133.64it/s] 69%|██████▉   | 6801/9788 [01:23<00:22, 133.61it/s] 70%|██████▉   | 6817/9788 [01:23<00:21, 135.15it/s] 70%|██████▉   | 6833/9788 [01:24<00:21, 135.06it/s] 70%|██████▉   | 6849/9788 [01:24<00:21, 135.16it/s] 70%|███████   | 6865/9788 [01:24<00:21, 136.77it/s] 70%|███████   | 6881/9788 [01:24<00:21, 137.94it/s] 70%|███████   | 6897/9788 [01:24<00:21, 137.30it/s] 71%|███████   | 6913/9788 [01:24<00:20, 137.04it/s] 71%|███████   | 6929/9788 [01:24<00:20, 136.86it/s] 71%|███████   | 6945/9788 [01:24<00:19, 142.55it/s] 71%|███████   | 6961/9788 [01:25<00:19, 144.86it/s] 71%|███████▏  | 6977/9788 [01:25<00:19, 146.67it/s] 71%|███████▏  | 6993/9788 [01:25<00:18, 149.24it/s] 72%|███████▏  | 7009/9788 [01:25<00:18, 152.30it/s] 72%|███████▏  | 7025/9788 [01:25<00:18, 152.49it/s] 72%|███████▏  | 7041/9788 [01:25<00:17, 152.62it/s] 72%|███████▏  | 7064/9788 [01:25<00:15, 175.07it/s] 72%|███████▏  | 7082/9788 [01:25<00:15, 174.85it/s] 73%|███████▎  | 7100/9788 [01:25<00:15, 175.45it/s] 73%|███████▎  | 7121/9788 [01:26<00:18, 145.14it/s] 73%|███████▎  | 7153/9788 [01:26<00:17, 153.90it/s] 73%|███████▎  | 7185/9788 [01:26<00:16, 158.47it/s] 74%|███████▎  | 7217/9788 [01:26<00:15, 161.34it/s] 74%|███████▍  | 7249/9788 [01:26<00:15, 164.00it/s] 74%|███████▍  | 7281/9788 [01:26<00:15, 166.23it/s] 75%|███████▍  | 7313/9788 [01:27<00:14, 168.42it/s] 75%|███████▌  | 7345/9788 [01:27<00:14, 171.27it/s] 75%|███████▌  | 7377/9788 [01:27<00:13, 174.16it/s] 76%|███████▌  | 7409/9788 [01:27<00:13, 177.34it/s] 76%|███████▌  | 7441/9788 [01:27<00:13, 179.92it/s] 76%|███████▋  | 7473/9788 [01:28<00:12, 181.55it/s] 77%|███████▋  | 7505/9788 [01:28<00:12, 183.09it/s] 77%|███████▋  | 7537/9788 [01:28<00:12, 185.89it/s] 77%|███████▋  | 7569/9788 [01:28<00:11, 187.58it/s] 78%|███████▊  | 7601/9788 [01:28<00:11, 189.74it/s] 78%|███████▊  | 7633/9788 [01:28<00:11, 189.61it/s] 78%|███████▊  | 7665/9788 [01:29<00:11, 190.52it/s] 79%|███████▊  | 7697/9788 [01:29<00:10, 191.54it/s] 79%|███████▉  | 7729/9788 [01:29<00:10, 192.28it/s] 79%|███████▉  | 7761/9788 [01:29<00:10, 193.91it/s] 80%|███████▉  | 7793/9788 [01:29<00:10, 194.63it/s] 80%|███████▉  | 7825/9788 [01:29<00:10, 195.23it/s] 80%|████████  | 7857/9788 [01:30<00:09, 196.03it/s] 81%|████████  | 7889/9788 [01:30<00:09, 196.50it/s] 81%|████████  | 7921/9788 [01:30<00:09, 200.25it/s] 81%|████████▏ | 7953/9788 [01:30<00:08, 205.28it/s] 82%|████████▏ | 7985/9788 [01:30<00:08, 210.29it/s] 82%|████████▏ | 8017/9788 [01:30<00:08, 213.94it/s] 82%|████████▏ | 8049/9788 [01:30<00:08, 216.88it/s] 83%|████████▎ | 8081/9788 [01:31<00:07, 220.68it/s] 83%|████████▎ | 8113/9788 [01:31<00:07, 222.73it/s] 83%|████████▎ | 8145/9788 [01:31<00:07, 224.28it/s] 84%|████████▎ | 8177/9788 [01:31<00:07, 225.67it/s] 84%|████████▍ | 8209/9788 [01:31<00:06, 226.58it/s] 84%|████████▍ | 8241/9788 [01:31<00:06, 227.28it/s] 85%|████████▍ | 8273/9788 [01:31<00:06, 229.93it/s] 85%|████████▍ | 8305/9788 [01:32<00:06, 230.25it/s] 85%|████████▌ | 8337/9788 [01:32<00:06, 231.66it/s] 86%|████████▌ | 8369/9788 [01:32<00:06, 230.43it/s] 86%|████████▌ | 8401/9788 [01:32<00:05, 231.73it/s] 86%|████████▌ | 8433/9788 [01:32<00:05, 232.51it/s] 86%|████████▋ | 8465/9788 [01:32<00:05, 233.39it/s] 87%|████████▋ | 8497/9788 [01:32<00:05, 234.82it/s] 87%|████████▋ | 8529/9788 [01:32<00:05, 235.91it/s] 87%|████████▋ | 8561/9788 [01:33<00:05, 236.79it/s] 88%|████████▊ | 8593/9788 [01:33<00:04, 239.31it/s] 88%|████████▊ | 8625/9788 [01:33<00:04, 240.98it/s] 88%|████████▊ | 8657/9788 [01:33<00:04, 242.38it/s] 89%|████████▉ | 8689/9788 [01:33<00:04, 243.21it/s] 89%|████████▉ | 8721/9788 [01:33<00:04, 243.51it/s] 89%|████████▉ | 8753/9788 [01:33<00:04, 244.43it/s] 90%|████████▉ | 8785/9788 [01:34<00:04, 247.51it/s] 90%|█████████ | 8817/9788 [01:34<00:03, 249.48it/s] 90%|█████████ | 8849/9788 [01:34<00:03, 251.30it/s] 91%|█████████ | 8881/9788 [01:34<00:03, 252.60it/s] 91%|█████████ | 8913/9788 [01:34<00:03, 254.06it/s] 91%|█████████▏| 8945/9788 [01:34<00:03, 254.83it/s] 92%|█████████▏| 8977/9788 [01:34<00:03, 256.32it/s] 92%|█████████▏| 9009/9788 [01:34<00:02, 262.21it/s] 92%|█████████▏| 9041/9788 [01:34<00:02, 266.59it/s] 93%|█████████▎| 9073/9788 [01:35<00:02, 270.23it/s] 93%|█████████▎| 9105/9788 [01:35<00:02, 271.76it/s] 93%|█████████▎| 9137/9788 [01:35<00:02, 274.19it/s] 94%|█████████▎| 9169/9788 [01:35<00:02, 275.41it/s] 94%|█████████▍| 9201/9788 [01:35<00:02, 277.05it/s] 94%|█████████▍| 9233/9788 [01:35<00:01, 278.33it/s] 95%|█████████▍| 9265/9788 [01:35<00:01, 282.16it/s] 95%|█████████▍| 9297/9788 [01:35<00:01, 284.11it/s] 95%|█████████▌| 9329/9788 [01:36<00:01, 285.72it/s] 96%|█████████▌| 9361/9788 [01:36<00:01, 286.92it/s] 96%|█████████▌| 9393/9788 [01:36<00:01, 287.93it/s] 96%|█████████▋| 9425/9788 [01:36<00:01, 289.40it/s] 97%|█████████▋| 9457/9788 [01:36<00:01, 289.52it/s] 97%|█████████▋| 9489/9788 [01:36<00:01, 290.13it/s] 97%|█████████▋| 9521/9788 [01:36<00:00, 290.98it/s] 98%|█████████▊| 9553/9788 [01:36<00:00, 296.95it/s] 98%|█████████▊| 9585/9788 [01:36<00:00, 302.89it/s] 98%|█████████▊| 9633/9788 [01:37<00:00, 320.01it/s] 99%|█████████▉| 9681/9788 [01:37<00:00, 337.76it/s] 99%|█████████▉| 9729/9788 [01:37<00:00, 350.04it/s]100%|█████████▉| 9777/9788 [01:37<00:00, 365.75it/s]100%|██████████| 9788/9788 [01:37<00:00, 100.50it/s]
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+2024-01-16:16:59:16,471 INFO     [evaluator.py:314] Running loglikelihood_rolling requests
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:01,  4.22it/s] 25%|██▌       | 2/8 [00:00<00:02,  2.17it/s] 38%|███▊      | 3/8 [00:01<00:02,  2.11it/s] 50%|█████     | 4/8 [00:01<00:01,  2.25it/s] 62%|██████▎   | 5/8 [00:02<00:01,  2.14it/s] 75%|███████▌  | 6/8 [00:02<00:00,  2.17it/s] 88%|████████▊ | 7/8 [00:02<00:00,  2.91it/s]100%|██████████| 8/8 [00:03<00:00,  3.04it/s]100%|██████████| 8/8 [00:03<00:00,  2.58it/s]
+bootstrapping for stddev: perplexity
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:01<02:00,  1.21s/it] 19%|█▉        | 19/100 [00:01<00:04, 19.39it/s] 88%|████████▊ | 88/100 [00:01<00:00, 100.65it/s]100%|██████████| 100/100 [00:01<00:00, 61.58it/s]
+hf (pretrained=lomahony/pythia-1.4b-helpful-sft), gen_kwargs: (None), limit: None, num_fewshot: 5, batch_size: 16
+|    Tasks     |Version|Filter|n-shot|    Metric     | Value |   |Stderr|
+|--------------|------:|------|-----:|---------------|------:|---|------|
+|arc_challenge |      1|none  |     5|acc            | 0.2892|±  |0.0133|
+|              |       |none  |     5|acc_norm       | 0.3097|±  |0.0135|
+|arc_easy      |      1|none  |     5|acc            | 0.6444|±  |0.0098|
+|              |       |none  |     5|acc_norm       | 0.6309|±  |0.0099|
+|boolq         |      2|none  |     5|acc            | 0.6333|±  |0.0084|
+|hellaswag     |      1|none  |     5|acc            | 0.4065|±  |0.0049|
+|              |       |none  |     5|acc_norm       | 0.5215|±  |0.0050|
+|lambada_openai|      1|none  |     5|perplexity     | 9.7040|±  |0.2887|
+|              |       |none  |     5|acc            | 0.4951|±  |0.0070|
+|openbookqa    |      1|none  |     5|acc            | 0.2220|±  |0.0186|
+|              |       |none  |     5|acc_norm       | 0.3100|±  |0.0207|
+|piqa          |      1|none  |     5|acc            | 0.7029|±  |0.0107|
+|              |       |none  |     5|acc_norm       | 0.7127|±  |0.0106|
+|sciq          |      1|none  |     5|acc            | 0.9170|±  |0.0087|
+|              |       |none  |     5|acc_norm       | 0.9160|±  |0.0088|
+|wikitext      |      2|none  |     5|word_perplexity|15.8394|±  |N/A   |
+|              |       |none  |     5|byte_perplexity| 1.6763|±  |N/A   |
+|              |       |none  |     5|bits_per_byte  | 0.7453|±  |N/A   |
+|winogrande    |      1|none  |     5|acc            | 0.5699|±  |0.0139|
+
