@@ -6,7 +6,7 @@ Steps:
 1. Create and activate venv 
 
 ```bash
-python310 -m venv trlx-pythia
+python3.10 -m venv trlx-pythia
 source trlx-pythia/bin/activate
 ``` 
 
