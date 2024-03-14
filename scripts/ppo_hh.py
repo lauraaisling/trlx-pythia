@@ -29,7 +29,7 @@ from trlx.data.default_configs import (
 default_config = TRLConfig(
     train=TrainConfig(
         seq_length=1024,
-        epochs=10000, #1,
+        epochs=10000000, #1, 10000
         total_steps=10000000,
         batch_size=32,
         checkpoint_interval=1000,
@@ -74,46 +74,6 @@ default_config = TRLConfig(
 )
 
 
-
-# config_name = os.environ.get("CONFIG_NAME")
-# if config_name == "125M":
-#     default_config.train.batch_size = 32
-#     default_config.train.total_steps = 1500
-#     default_config.train.checkpoint_dir = "checkpoints/ppo_hh_125M"
-#     default_config.model.model_path = "Dahoas/pythia-125M-static-sft"
-#     default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
-#     default_config.method.num_rollouts = 128
-# elif config_name == "1B":
-#     default_config.train.batch_size = 8
-#     default_config.train.total_steps = 2500
-#     default_config.optimizer.kwargs["lr"] = 6e-6
-#     default_config.scheduler.kwargs["eta_min"] = 6e-6
-#     default_config.train.checkpoint_dir = "checkpoints/ppo_hh_1B"
-#     default_config.model.model_path = "Dahoas/pythia-1B-static-sft"
-#     default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
-#     default_config.method.chunk_size = 16
-# elif config_name == "6B":
-#     default_config.train.batch_size = 4
-#     default_config.train.seq_length = 512
-#     default_config.train.total_steps = 6000
-#     default_config.train.checkpoint_dir = "checkpoints/ppo_hh_6B"
-#     default_config.model.model_path = "Dahoas/pythia-6B-static-sft"
-#     default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
-#     default_config.method.chunk_size = 16
-# elif config_name == "20B":
-#     default_config.train.seq_length = 512
-#     default_config.train.batch_size = 1
-#     default_config.train.total_steps = 8000
-#     default_config.optimizer.kwargs["lr"] = 1e-6
-#     default_config.scheduler.kwargs["eta_min"] = 1e-6
-#     default_config.train.checkpoint_dir = "checkpoints/ppo_hh_20B"
-#     default_config.model.model_path = "EleutherAI/gpt-neox-20b"
-#     default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
-#     default_config.method.num_rollouts = 16
-#     default_config.method.chunk_size = 4
-#     default_config.method.ppo_epochs = 2
-
-
 def prepare_tensor(name: str, input):
     t = client_util.InferInput(name, input.shape, np_to_triton_dtype(input.dtype))
     t.set_data_from_numpy(input)
@@ -121,7 +81,7 @@ def prepare_tensor(name: str, input):
 
 
 def create_reward_fn():  # noqa:  C901
-    reward_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B") # gpt2
+    reward_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16) # gpt2 , torch_dtype=torch.float16
     reward_tokenizer.pad_token = reward_tokenizer.eos_token
     reward_tokenizer.truncation_side = "left"
     triton_host = os.environ.get("TRITON_HOST")
@@ -151,7 +111,7 @@ def create_reward_fn():  # noqa:  C901
         class RewardModel(nn.Module):
             def __init__(self, checkpoint_path, eos_token_id):
                 super().__init__()
-                model = AutoModelForCausalLM.from_pretrained(checkpoint_path)
+                model = AutoModelForCausalLM.from_pretrained(checkpoint_path, torch_dtype=torch.float16) # , torch_dtype=torch.float16
                 self.transformer = model.transformer
                 self.v_head = nn.Linear(model.config.n_embd, 1, bias=False)
                 self.eos_token_id = eos_token_id
@@ -219,96 +179,52 @@ def main(config: DictConfig):
 
     # config_name = os.environ.get("CONFIG_NAME", "2.8B")
     # config_name = os.environ.get("CONFIG_NAME")
-    # if config_name == "70M":
-    if config.model.model_size == "70m":
-        # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/do2vbz2o
-        default_config.train.batch_size = 8
-        default_config.train.seq_length = 1024
-        default_config.train.total_steps = 750 #################################################
-        default_config.model.model_path = "lomahony/pythia-70m-helpful-sft"
-        default_config.model.num_layers_unfrozen = 4
-        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-70m/"
-        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-70m"
-        default_config.optimizer.kwargs["lr"] = 5.45e-6
-        default_config.optimizer.kwargs["weight_decay"] = 0.0006
-        default_config.scheduler.kwargs["eta_min"] = 5.45e-6
-        default_config.method.num_rollouts = 32
-        default_config.method.target = 5.71
-        default_config.method.ppo_epochs = 8
-        default_config.method.chunk_size = 4
-    elif config.model.model_size == "160m":
-        # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/jubaluv8
-        default_config.train.batch_size = 8 
-        default_config.train.seq_length = 1024
-        default_config.train.total_steps = 750
-        default_config.model.model_path = "pythia-160m-helpful-sft"
-        default_config.model.num_layers_unfrozen = 4
-        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-160m/"
-        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-160m"
-        default_config.optimizer.kwargs["lr"] = 1.7e-6
-        default_config.optimizer.kwargs["weight_decay"] = 3.81e-5
-        default_config.scheduler.kwargs["eta_min"] = 1.7e-6
-        default_config.method.num_rollouts = 48
-        default_config.method.chunk_size = 4
-        default_config.method.ppo_epochs = 6
-        default_config.method.target = 6.42 
-    elif config.model.model_size == "410m":
-        # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/vpuhppgx
-        default_config.train.batch_size = 8
-        default_config.train.total_steps = 750
-        default_config.train.seq_length = 1024
-        default_config.model.model_path = "pythia-410m-helpful-sft"
-        default_config.model.num_layers_unfrozen = 4 #### 3
-        default_config.optimizer.kwargs["lr"] = 2.2e-7
-        default_config.scheduler.kwargs["eta_min"] = 2.2e-7
-        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-410m"
-        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-410m"
-        default_config.method.chunk_size = 4
-        default_config.method.num_rollouts = 48
-        default_config.method.ppo_epochs = 5
-        default_config.method.target = 4.9
-    elif config.model.model_size == "1b":
+    if config.model.model_size == "1b":
         default_config.train.batch_size = 4
         default_config.train.seq_length = 1024
+        # default_config.train.epochs = 3 ###  epochs seems to set to ppo_epochs - trlx bug?
         default_config.model.num_layers_unfrozen = 4 #### 
-        default_config.train.total_steps = 2500
+        # default_config.train.total_steps = 100000 #2500
         default_config.optimizer.kwargs["lr"] = 6e-6
-        default_config.optimizer.kwargs["weight_decay"] = 0.0002
+        # default_config.optimizer.kwargs["weight_decay"] = 0.0002 ###
         default_config.scheduler.kwargs["eta_min"] = 6e-6
-        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-1B"
+        default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-1b"
         default_config.model.model_path = "lomahony/pythia-1b-helpful-sft"
-        default_config.tokenizer.tokenizer_path = "EleutherAI/gpt-neox-20b"
-        default_config.method.chunk_size = 16
+        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-1b" #"EleutherAI/gpt-neox-20b"
+        # default_config.method.chunk_size = 16
     elif config.model.model_size == "1.4b":
         default_config.train.batch_size = 4
         default_config.train.seq_length = 1024
-        default_config.train.total_steps = 1500
+        # default_config.train.epochs = 3 ### epochs seems to set to ppo_epochs - trlx bug?
+        # default_config.train.total_steps = 100000 #1500
         default_config.model.num_layers_unfrozen = 4 ### 2
-        default_config.optimizer.kwargs["lr"] = 6e-6
-        default_config.scheduler.kwargs["eta_min"] = 6e-6
+        default_config.optimizer.kwargs["lr"] = 4e-6
+        # default_config.optimizer.kwargs["weight_decay"] = 0.0002 ###
+        default_config.scheduler.kwargs["eta_min"] = 4e-6# 5.5e-6
         default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-1.4b"
         default_config.model.model_path = "lomahony/pythia-1.4b-helpful-sft"
-        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-2.8b"
-        default_config.method.chunk_size = 4
-        default_config.method.num_rollouts = 48
-        default_config.method.ppo_epochs = 8
-        default_config.method.target = 5.067
+        default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-1.4b"
+        # default_config.method.chunk_size = 4
+        # default_config.method.num_rollouts = 48
+        # default_config.method.ppo_epochs = 8
+        # default_config.method.target = 5.067
     elif config.model.model_size == "2.8b":
         # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/9ui2aa0x
         default_config.train.batch_size = 2
         default_config.train.seq_length = 1024
-        default_config.train.total_steps = 3000
+        # default_config.train.epochs = 3 ### epochs seems to set to ppo_epochs - trlx bug?
+        # default_config.train.total_steps = 100000 #3000
         default_config.model.num_layers_unfrozen = 4 #### 19
         default_config.optimizer.kwargs["lr"] = 2.3e-6
-        default_config.optimizer.kwargs["weight_decay"] = 1.7e-3
-        default_config.scheduler.kwargs["eta_min"] = 2.3e-6
+        # default_config.optimizer.kwargs["weight_decay"] = 0.0002 #1.7e-3
+        default_config.scheduler.kwargs["eta_min"] = 2.3e-6 #6e-6 #2.3e-6
         default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-2.8b"
         default_config.model.model_path = "lomahony/pythia-2.8b-helpful-sft"
         default_config.tokenizer.tokenizer_path = "EleutherAI/pythia-2.8b"
-        default_config.method.chunk_size = 4
-        default_config.method.num_rollouts = 48
-        default_config.method.ppo_epochs = 4
-        default_config.method.target = 5
+        # default_config.method.chunk_size = 4
+        # default_config.method.num_rollouts = 48
+        # default_config.method.ppo_epochs = 4
+        # default_config.method.target = 5
 
 
     final_config = TRLConfig.update(default_config, OmegaConf.to_container(config)) 
@@ -334,10 +250,5 @@ def main(config: DictConfig):
 
 
 if __name__ == "__main__":
-    # hparams = {} if len(sys.argv) == 1 else json.loads(sys.argv[1])
-    # if len(sys.argv) > 2:
-    #     default_config.optimizer.kwargs['lr'] = float(sys.argv[2])
-    #     default_config.scheduler.kwargs['eta_min'] = float(sys.argv[2])
-    #     default_config.optimizer.kwargs['weight_decay'] = float(sys.argv[3])
     main() # hparams
     

@@ -1,11 +1,11 @@
 Create python 3.10 venv
-installed torcg for cuda 12.1
+installed torch for cuda 12.1
 install trlx as per https://github.com/CarperAI/trlx
 pip install hydra-core
 pip install grpcio
 
 nvidia smi:
-srun --account eleuther --partition=g40x --nodes=1 --gpus=8 --cpus-per-gpu=12 nvidia-smi 
+srun --account eleuther --partition=a40x --nodes=1 --gpus=8 --cpus-per-gpu=12 nvidia-smi 
 
 launch interactive session:
-srun --account eleuther --partition=g40x --gpus=8 --cpus-per-gpu=12 --job-name=test-sft-pythia --pty bash -i
+srun --account eleuther --partition=a40x --gpus=8 --cpus-per-gpu=12 --job-name=test-sft-pythia --pty bash -i

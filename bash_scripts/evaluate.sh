@@ -3,13 +3,13 @@
 # sbatch bash_scripts/evaluate.sh
 #Resource Request 
 #SBATCH --account=eleuther
-#SBATCH --job-name=sft-pythia
+#SBATCH --job-name=evaluate
 #SBATCH --output=%x_%j.out   ## filename of the output; the %j is equivalent to jobID; default is slurm-[jobID].out 
 ##SBATCH --error=%x_%jerror.out    # Set this dir where you want slurm outs to go
 #SBATCH --partition=a40x ## the partitions to run in (comma seperated) 
 
 #SBATCH --gpus=8 # number of gpus per task 
-#SBATCH --cpus-per-gpu=12 
+#SBATCH --cpus-per-gpu=8 
 #SBATCH --nodes=1
 
 ##SBATCH --ntasks=1  ## number of tasks (analyses) to run 
@@ -66,9 +66,21 @@ source /admin/home-laura/venvs/venv-lm-evaluation-harness/bin/activate
 # accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-dpo --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-dpo-0shot &> files/model_evals/pythia-2.8b-helpful-dpo-0shot-shelloutput.txt 
 # accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-dpo --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-dpo-5shot &> files/model_evals/pythia-2.8b-helpful-dpo-5shot-shelloutput.txt 
 
+# accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-sft-3epochs,revision=epoch2-12000 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-sft-3epochs-ep2-0shot &> files/model_evals/pythia-2.8b-helpful-sft-3epochs-ep2-0shot-shelloutput.txt 
+# accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-sft-3epochs,revision=epoch2-12000 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-sft-3epochs-ep2-5shot &> files/model_evals/pythia-2.8b-helpful-sft-3epochs-ep2-5shot-shelloutput.txt 
+
+accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-sft-epoch2 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-sft-epoch2-0shot &> files/model_evals/pythia-2.8b-helpful-sft-epoch2-0shot-shelloutput.txt 
+accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-2.8b-helpful-sft-epoch2 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path files/model_evals/pythia-2.8b-helpful-sft-epoch2-5shot &> files/model_evals/pythia-2.8b-helpful-sft-epoch2-5shot-shelloutput.txt 
+
+# accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-1.4b-helpful-sfted1-ppo-3epochs,revision=main-epoch1-3600 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path files/model_evals/pythia-1.4b-helpful-sfted1-ppo-ep1-0shot &> files/model_evals/pythia-1.4b-helpful-sfted1-ppo-ep1-0shot-shelloutput.txt 
+# accelerate launch -m lm_eval --model hf --model_args pretrained=lomahony/pythia-1.4b-helpful-sfted1-ppo-3epochs,revision=main-epoch1-3600 --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path files/model_evals/pythia-1.4b-helpful-sfted1-ppo-ep1-5shot &> files/model_evals/pythia-1.4b-helpful-sfted1-ppo-ep1-5shot-shelloutput.txt 
 
 # old
 # python main.py --model hf --model_args pretrained=lomahony/pythia-70m-helpful-sft,parallelize=True --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path trlx-pythia/files/model_evals/pythia-70m-helpful-0shot > trlx-pythia/files/model_evals/pythia-70m-helpful-0shot-shelloutput.txt 
 # python main.py --model hf --model_args pretrained=lomahony/pythia-70m-helpful-sft,parallelize=True --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path trlx-pythia/files/model_evals/pythia-70m-helpful-5shot > trlx-pythia/files/model_evals/pythia-70m-helpful-5shot-shelloutput.txt 
 # accelerate launch main.py --model hf --model_args pretrained=lomahony/pythia-70m-helpful-sft --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 0 --batch_size 16 --output_path trlx-pythia/files/model_evals/pythia-70m-helpful-sft-0shot # > trlx-pythia/files/model_evals/pythia-70m-helpful-sft-0shot-shelloutput.txt 
 # accelerate launch main.py --model hf --model_args pretrained=lomahony/pythia-70m-helpful-sft --tasks lambada_openai,hellaswag,arc_easy,arc_challenge,wikitext,winogrande,piqa,boolq,openbookqa,sciq --num_fewshot 5 --batch_size 16 --output_path trlx-pythia/files/model_evals/pythia-70m-helpful-sft-5shot # > trlx-pythia/files/model_evals/pythia-70m-helpful-sft-5shot-shelloutput.txt 
+
+
+
+
