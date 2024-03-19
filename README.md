@@ -46,7 +46,10 @@ sbatch bash_scripts/upload.sh
 ``` 
 
 4. Evals - lm-evaluation harness:
-Clone repo - switch to big refactor branch. Create new env and install. Run bash_scripts/evaluate.sh
+Clone repo - switch to big refactor branch. Create new env and install. 
+```bash
+sbatch bash_scripts/evaluate.sh
+``` 
 
 ## Notes:
 [sft wandb runs](https://wandb.ai/lauraomahony999/pythia-sft){:target="_blank"}, [dpo wandb runs](https://wandb.ai/lauraomahony999/pythia-dpo){:target="_blank"} 

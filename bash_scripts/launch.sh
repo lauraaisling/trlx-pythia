@@ -2,8 +2,8 @@
 # sbatch bash_scripts/launch.sh
 #Resource Request 
 #SBATCH --account=eleuther
-#SBATCH --job-name=sft3-finetune
-#SBATCH --output=sft-2.8b-3epochs%x_%j.out   ## filename of the output; the %j is equivalent to jobID; default is slurm-[jobID].out 
+#SBATCH --job-name=ppo-finetune-sfted1
+#SBATCH --output=%x_%j.out   ## filename of the output; the %j is equivalent to jobID; default is slurm-[jobID].out 
 #SBATCH --partition=a40x ## the partitions to run in (comma seperated) 
 
 #SBATCH --gpus=8 # number of gpus per task 
