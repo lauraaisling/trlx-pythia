@@ -2,6 +2,10 @@
 
 Code and instructions to perform Supervised and RLHF (PPO) finetuning of EleutherAI/pythia-XXX models with helpful part of Anthropic hh [dataset](https://huggingface.co/datasets/Dahoas/static-hh) with [TRLx](https://github.com/CarperAI/trlx/tree/main) library. 
 
+More details about the HuggingFace pythia-helpful-1epoch [suite](https://huggingface.co/collections/lomahony/pythia-helpful-1epoch-65f0eb6b906e39ea4b3b1956), such as hyperparameters is available in the paper [Attributing Mode Collapse in the Fine-Tuning of Large Language Models](https://openreview.net/forum?id=3pDMYjpOxk)
+
+DPO model training code is in [https://github.com/lauraaisling/direct-preference-optimization](https://github.com/lauraaisling/direct-preference-optimization)
+
 Steps: 
 1. Set up
 
@@ -55,3 +59,17 @@ sbatch bash_scripts/evaluate.sh
 [sft wandb runs](https://wandb.ai/lauraomahony999/pythia-sft){:target="_blank"}, [dpo wandb runs](https://wandb.ai/lauraomahony999/pythia-dpo){:target="_blank"} 
 
 Models available on HuggingFace: https://huggingface.co/lomahony 
+
+If you find the code or models useful, please feel consider citing us: 
+<pre>
+@inproceedings{o2024attributing,
+  title={Attributing Mode Collapse in the Fine-Tuning of Large Language Models},
+  author={O’Mahony, Laura and Grinsztajn, Leo and Schoelkopf, Hailey and Biderman, Stella},
+  booktitle={ICLR 2024, Mathematical and Empirical Understanding of Foundation Models (ME-FoMo) workshop},
+  year={2024}
+}
+</pre>
+
+## Contact
+
+For questions, please contact Laura O'Mahony - lauraaisling.ml@gmail.com
